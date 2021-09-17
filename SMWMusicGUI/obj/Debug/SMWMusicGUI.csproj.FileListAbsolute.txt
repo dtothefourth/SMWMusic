@@ -130,3 +130,25 @@ C:\Users\Justin\Desktop\Git Code\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.cspr
 C:\Users\Justin\Desktop\Git Code\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.csproj.CopyComplete
 C:\Users\Justin\Desktop\Git Code\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.exe
 C:\Users\Justin\Desktop\Git Code\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.pdb
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\SMWMusicGUI.exe.config
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\SMWMusicGUI.exe
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\SMWMusicGUI.pdb
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\Google.Protobuf.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\MySql.Data.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\Renci.SshNet.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\System.Buffers.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\System.Memory.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.Form1.resources
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.Properties.Resources.resources
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.csproj.GenerateResource.cache
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.csproj.CoreCompileInputs.cache
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.csproj.Fody.CopyLocal.cache
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.csproj.CopyComplete
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.exe
+C:\Users\marku\source\repos\SMWMusic\SMWMusicGUI\obj\Debug\SMWMusicGUI.pdb

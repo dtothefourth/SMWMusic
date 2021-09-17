@@ -1,13 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SMWMusicGUI
@@ -79,13 +72,31 @@ namespace SMWMusicGUI
             bool hirom = IsHirom(rom);
 
             int slot = 1;
-            MySqlConnection connection = new MySqlConnection("Server=dtothefourth.space,3306;Database=SMW_Music;User Id=blindkaizorace_db;Password=IRm6tQl.jZls;");
+            MySqlConnection connection = new MySqlConnection("Server=116.202.123.111,3306;Database=SMW_Music;User Id=blindkaizorace_db;Password=IRm6tQl.jZls;");
             try
             {
                 connection.Open();
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
-                MessageBox.Show("Could not connect to song database...");
+                this.Enabled = false;
+                string message = string.Format("The database connection failed.\r\nIf this error persists please contact wepeelis (SMW central)\r\n\nReason: {0}", e.Message);
+                string caption = "Database connection failed";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(this, message, caption, buttons,
+                    MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+                if (result == DialogResult.OK)
+                {
+
+                    // Closes the parent form.
+
+                    this.Enabled = true;
+                }
                 return;
             }
             try
@@ -102,6 +113,7 @@ namespace SMWMusicGUI
                 {
                     creader.Close();
                     Output.Text += "\r\nThis ROM does not appear to have Addmusick applied.";
+                    Output.SelectionStart = Output.Text.Length;
                     return;
                 }
 
@@ -163,7 +175,7 @@ namespace SMWMusicGUI
 
                     string sql = "SELECT ID, Size, Data, URL, Name, Sub FROM Songs WHERE Size = @param2";
                     MySqlCommand cmd = new MySqlCommand(sql, connection);
-                    
+
                     cmd.Parameters.AddWithValue("@param2", size);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
@@ -195,10 +207,12 @@ namespace SMWMusicGUI
                         if (ID == 0)
                         {
                             Output.AppendText("\r\n" + slot.ToString("X") + " - Originals - " + name);
+                            Output.SelectionStart = Output.Text.Length;
                         }
                         else
                         {
                             Output.AppendText("\r\n" + slot.ToString("X") + " - https://smwc.me/s/" + ID + " - " + name);
+                            Output.SelectionStart = Output.Text.Length;
                         }
 
                     }
@@ -243,23 +257,26 @@ namespace SMWMusicGUI
                             if (ID == 0)
                             {
                                 Output.AppendText("\r\n" + slot.ToString("X") + " - (Modified Version?) Originals - " + name);
+                                Output.SelectionStart = Output.Text.Length;
                             }
                             else
                             {
                                 Output.AppendText("\r\n" + slot.ToString("X") + " - (Modified Version?) https://smwc.me/s/" + ID + " - " + name);
+                                Output.SelectionStart = Output.Text.Length;
                             }
 
                         }
                         else
                         {
                             Output.AppendText("\r\n" + slot.ToString("X") + " - Could not locate");
+                            Output.SelectionStart = Output.Text.Length;
                         }
 
 
 
-                        
+
                     }
-                    
+
                 }
                 creader.Close();
 
@@ -379,6 +396,7 @@ namespace SMWMusicGUI
                 Output.Text = "";
                 GetSongData(dialog.FileName);
                 Output.Text += "\r\n\r\nDone";
+                Output.SelectionStart = Output.Text.Length;
             }
             Select_ROM.Enabled = true;
 
@@ -387,6 +405,30 @@ namespace SMWMusicGUI
         private void Output_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(e.LinkText);
+        }
+
+        private void Click_patched(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            string message = "Coded by dtothefourth\r\npatched by wepeelis\r\n\n© dtothefourth 2021";
+            string caption = "Credits";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            // Displays the MessageBox.
+
+            result = MessageBox.Show(this, message, caption, buttons,
+                MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.OK)
+            {
+
+                // Closes the parent form.
+
+                this.Enabled = true;
+            }
+            return;
+
         }
     }
 }
