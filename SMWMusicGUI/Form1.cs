@@ -10,6 +10,7 @@ namespace SMWMusicGUI
         public Form1()
         {
             InitializeComponent();
+            Output.Text = "Initialized";
         }
 
         int ComputeLevenshteinDistance(string source, string target)
